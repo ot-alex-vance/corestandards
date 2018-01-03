@@ -7,3 +7,12 @@ This repo should be used as a guideline and/or template to setting up a dotnetco
 - The solution need to contain solution folders that match the physical folders (src, test, etc).
 - All source code should exist in project folders underneath a 'src' solution/physical folder.
 - All tests should exist in project folders underneath a 'test' solution/physical folder.
+
+## Namespacing
+- Projects should be namespaced to match this namespacing scheme:
+  - OneTechnologies.<product-name>.<project-name>.<area>.<sub-area>.
+    - OneTechnologies.CoreStandards.One
+    - OneTechnologies.CoreStandards.One.Utils
+    - OneTechnologies.CoreStandards.One.Tests
+    - OneTechnologies.CoreStandards.One.Tests.Utils
+  
