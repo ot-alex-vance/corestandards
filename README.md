@@ -10,7 +10,7 @@ This repo should be used as a guideline and/or template to setting up a dotnetco
 
 ## Namespacing
 - Projects should be namespaced to match this namespacing scheme:
-  - OneTechnologies.<product-name>.<project-name>.<area>.<sub-area>.
+  - OneTechnologies.Product.Project.Area.SubArea
     - OneTechnologies.CoreStandards.One
     - OneTechnologies.CoreStandards.One.Utils
     - OneTechnologies.CoreStandards.One.Tests
