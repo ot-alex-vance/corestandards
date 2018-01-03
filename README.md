@@ -1,2 +1,2 @@
-# corestandards
-Standards for .NET Core based projects
+# dotnetcore standards
+This is an example repo for standarizing dotnetcore repositories/solutions.
