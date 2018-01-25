@@ -58,27 +58,7 @@ FruitFlavor flavor = fruit.GetFlavor();
 
 Examples are <code>string</code> over <code>String</code>; <code>object</code> over <code>Object</code>
 
-### Cross-platform considerations
-
-Since dotnetcore is cross-platform supported, we need to keep in mind that other developers may be working on a non-windows system. Here are a few things we can do to ensure we won't have problems working in different environments.
-
-#### Line Breaks
-
-Windows uses \r\n, OS X and Linux uses \n. When it is important, use Environment.NewLine instead of hard-coding the line break.
-
-#### Environment Variables
-
-OS's use different variable names to represent similar settings. Code should consider these differences.
-
-For example, when looking for the user's home directory, on Windows the variable is <code>USERPROFILE</code> but on most Linux systems it is <code>HOME</code>.
-
-#### File path separators (most important)
-
-Windows uses \ and OS X and Linux use / to separate directories. Instead of hard-coding either type of slash, use <code>Path.Combine()</code> or <code>Path.DirectorySeparatorChar</code>.
-
-If this is not possible (such as in scripting), use a forward slash. Windows is more forgiving than Linux in this regard.
-
-#### Exception Handling
+### Exception Handling
 
 1. Use try/catch/finally blocks around code that can potentially generate an exception
     - In catch blocks, always order exceptions from the most specific to the least specific
@@ -98,3 +78,23 @@ XUnit should be used as the test framework for building out unit tests.
 All unit tests should follow the three staged structure of: Arrange, Act, Assert.
 
 All our code is should be unit tested when possible. There are obviously some circumstances that will not or cannot be tested. These should be notated during pull requests.
+
+### Cross-platform considerations
+
+Since dotnetcore is cross-platform supported, we need to keep in mind that other developers may be working on a non-windows system. Here are a few things we can do to ensure we won't have problems working in different environments.
+
+#### Line Breaks
+
+Windows uses \r\n, OS X and Linux uses \n. When it is important, use Environment.NewLine instead of hard-coding the line break.
+
+#### Environment Variables
+
+OS's use different variable names to represent similar settings. Code should consider these differences.
+
+For example, when looking for the user's home directory, on Windows the variable is <code>USERPROFILE</code> but on most Linux systems it is <code>HOME</code>.
+
+#### File path separators (most important)
+
+Windows uses \ and OS X and Linux use / to separate directories. Instead of hard-coding either type of slash, use <code>Path.Combine()</code> or <code>Path.DirectorySeparatorChar</code>.
+
+If this is not possible (such as in scripting), use a forward slash. Windows is more forgiving than Linux in this regard.
