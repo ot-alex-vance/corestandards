@@ -86,7 +86,7 @@ If this is not possible (such as in scripting), use a forward slash. Windows is 
 2. Handle common conditions without throwing exceptions
     - Ex: checking a connections state before attempting to close it if(con.state != closed) { con.close(); }
 3. Design classes to avoid exceptions. 
-    - Ex: reading a stream without checking if it's null first
+    - Ex: check if a stream is null before trying to read it. if(stream == null) throw new ArgumentNullException(nameof(stream))
 4. Use predefined .net exceptions
     - Only implement a custom exception when no predefined exception applies.
     - Always name exceptions with an "Exception" suffix. Ex: FooException
