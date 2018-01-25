@@ -78,6 +78,19 @@ Windows uses \ and OS X and Linux use / to separate directories. Instead of hard
 
 If this is not possible (such as in scripting), use a forward slash. Windows is more forgiving than Linux in this regard.
 
+#### Exception Handling
+
+1. Use try/catch/finally blocks around code that can potentially generate an exception
+    - In catch blocks, always order exceptions from the most specific to the least specific
+    - Use a finally block to clean up resources, whether you can recover or not
+2. Handle common conditions without throwing exceptions
+    - Ex: checking a connections state before attempting to close it if(con.state != closed) { con.close(); }
+3. Design classes to avoid exceptions. 
+    - Ex: reading a stream without checking if it's null first
+4. Use predefined .net exceptions
+    - Only implement a custom exception when no predefined exception applies.
+    - Always name exceptions with an "Exception" suffix. Ex: FooException
+
 ### Unit testing
 
 XUnit should be used as the test framework for building out unit tests.
