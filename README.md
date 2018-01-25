@@ -71,6 +71,10 @@ Examples are <code>string</code> over <code>String</code>; <code>object</code> o
     - Only implement a custom exception when no predefined exception applies.
     - Always name exceptions with an "Exception" suffix. Ex: FooException
 
+### Logging
+
+NLog should be used as the log framework for our solutions. Refer to existing solutions for configuration/setup.
+
 ### Unit testing
 
 XUnit should be used as the test framework for building out unit tests.
